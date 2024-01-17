@@ -162,7 +162,7 @@ export default function UpdateListing() {
         <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-10'>
             <div className='flex flex-col gap-4 flex-1'>
                 <input onChange={handleChange} value={formData.name} type='text' placeholder='Name' className='border p-3 rounded-lg' id='name' maxLength='62' minLength='10' required/>
-                <textarea onChange={handleChange} value={formData.description} type='text' placeholder='Description' className='border p-3 rounded-lg' id='description' required/>
+                <textarea onChange={handleChange} value={formData.description} type='text' placeholder='Description' className='border p-3 rounded-lg h-60' id='description' required/>
                 <input onChange={handleChange} value={formData.address} type='text' placeholder='Address' className='border p-3 rounded-lg' id='address' required/>
                 <div className='flex gap-6 flex-wrap'>
                     <div className='flex gap-2'>
@@ -199,15 +199,15 @@ export default function UpdateListing() {
                         <input onChange={handleChange} value={formData.regularPrice} type="number" name="regularPrice" id="regularPrice" min='1' className='p-3 border border-gray-300 rounded-lg'required/>
                         <div className='flex flex-col items-center'>
                             <p>Regular Price</p>
-                            <span className='text-xs'>(LKR/ Month)</span>
+                            {formData.type === 'rent' && (<span className='text-xs'>(LKR/ Month)</span>)}
                         </div>
                     </div>
                     {formData.offer &&(
                         <div className='flex items-center gap-2'>
                             <input onChange={handleChange} value={formData.discountPrice} type="number" name="discountPrice" id="discountPrice" min='0' className='p-3 border border-gray-300 rounded-lg'required/>
                             <div className='flex flex-col items-center'>
-                                <p>Discounted Price</p>
-                                <span className='text-xs'>(LKR/ Month)</span>
+                                <p>Discount Price</p>
+                                {formData.type === 'rent' && (<span className='text-xs'>(LKR/ Month)</span>)}
                             </div>
                         </div>
                     )}
