@@ -5,3 +5,23 @@
 body {
   background-color: rgb(241, 245, 241);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100 116 139);
+}
