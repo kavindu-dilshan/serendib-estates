@@ -139,7 +139,7 @@ export default function Profile() {
   }
 
   return (
-    <div className='p-3 max-w-lg mx-auto'>
+    <div className='p-3 max-w-lg mx-auto mb-20'>
       <h1 className='text-3xl text-center font-bold my-7 text-slate-700'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input onChange={(e) => setFile(e.target.files[0])} type="file" ref={fileRef} hidden accept='image/*'/>
@@ -160,10 +160,10 @@ export default function Profile() {
         <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer font-medium'>Delete Account</span>
         <span onClick={handleSignOut} className='text-red-700 cursor-pointer font-medium'>Sign Out</span>
       </div>
-      <p className='text-red-700 mt-5 font-medium'>{error ? error : ''}</p>
-      <p className='text-green-600 mt-5 font-medium'>{updtaeSuccess? 'User details updated successfully.' : ''}</p>
-      <button onClick={handleShowListings} className='text-green-700 font-semibold w-full'>Show Listings</button>
-      <p className='text-red-700 mt-5 font-medium'>{showListingsError ? 'Apologies, we are unable to display listings right now.' : ''}</p>
+      <button onClick={handleShowListings} className='text-green-700 font-semibold w-full mt-5'>Show Listings</button>
+      <p className='text-red-700 mt-5 font-medium text-center'>{error ? error : ''}</p>
+      <p className='text-green-600 mt-5 font-medium text-center'>{updtaeSuccess? 'User details updated successfully.' : ''}</p>
+      <p className='text-red-700 mt-5 font-medium text-center'>{showListingsError ? 'Apologies, we are unable to display listings right now.' : ''}</p>
 
       {userListings && userListings.length > 0 &&
       <div className='flex flex-col gap-4'>
