@@ -4,7 +4,7 @@ import { FaBath, FaBed, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function ListingItem({listing}) {
   return (
-    <div className='bg-white shadow-md hover:shadow-lg overflow-hidden rounded-lg w-full sm:w-[330px] hover:scale-105 transition-all duration-200 m-1'>
+    <div className='bg-white shadow-md hover:shadow-lg overflow-hidden rounded-lg w-full sm:w-[330px] hover:scale-105 transition-all duration-200'>
       <Link to={`/listing/${listing._id}`}>
         <img src={listing.imageURL[0] || 'https://img.freepik.com/free-vector/real-estate-searching_52683-46407.jpg'} alt="listing cover" className='h-[200px] sm:h-[220px] w-full object-cover'/>
         <div className="p-3 flex flex-col gap-2 w-full">
