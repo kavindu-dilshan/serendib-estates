@@ -24,7 +24,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/real-estate-marketplace.git
+git clone https://github.com/kavindu-dilshan/serendib-estates.git
 ```
 
 2. Install dependencies for the frontend and backend:
